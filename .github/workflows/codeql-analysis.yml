@@ -77,3 +77,15 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@0ba4244466797eb048eb91a6cd43d5c03ca8bd05 # v2.21.2
+    - name: Generate Security Report
+      continue-on-error: true
+      uses: rsdmike/github-security-report-action@a149b24539044c92786ec39af8ba38c93496495d # v3.0.4
+      with:
+        template: report
+        token: ${{ secrets.SECURITY_TOKEN }}
+    - name: GitHub Upload Release Artifacts
+      continue-on-error: true
+      uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
+      with:
+        name: report
+        path: ./*.pdf
