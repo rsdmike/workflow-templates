@@ -1,3 +1,4 @@
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/rsdmike/node-workflow-templates/badge)](https://api.securityscorecards.dev/projects/github.com/rsdmike/node-workflow-templates) 
 # NodeJS Github Action Workflow Templates
 
 This template repository contains recommended github action workflows for node.js based applications written in Typescript (can be adapted to work with javascript only). This repository also contains a lightweight scaffold for a Typescript nodejs app with ESLint (with StandardJS rules) and license header formatting for linting and Jest configured for testing.
