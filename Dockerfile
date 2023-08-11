@@ -18,7 +18,7 @@ RUN npm run build
 RUN npm prune --production
 
 # Build the final image from alpine base
-FROM alpine:latest@sha256:82d1e9d7ed48a7523bdebc18cf6290bdb97b82302a8a9c27d4fe885949ea94d1
+FROM alpine:latest@sha256:7144f7bab3d4c2648d7e59409f15ec52a18006a128c733fcff20d3a4a54ba44a
 ENV NODE_ENV=production
 
 RUN addgroup -g 1000 node && adduser -u 1000 -G node -s /bin/sh -D node 
