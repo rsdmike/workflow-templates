@@ -2,7 +2,7 @@
 # Copyright (c) Intel Corporation 2023
 # SPDX-License-Identifier: Apache-2.0
 #*********************************************************************/
-FROM node:20-bullseye-slim@sha256:f54a16be368537403c6f20e6e9cfa400f4b71c71ae9e1e93558b33a08f109db6 as builder
+FROM node:21-bullseye-slim@sha256:0b45d811c7eb924e9e5c57e4cf609af27ab48d2a3db2b5fad7f5e1cd8963d720 as builder
 LABEL license='SPDX-License-Identifier: Apache-2.0' \
     copyright='Copyright (c) Intel Corporation 2023'
 WORKDIR /usr/src/app
@@ -18,7 +18,7 @@ RUN npm run build
 RUN npm prune --production
 
 # Build the final image from alpine base
-FROM alpine:latest@sha256:eece025e432126ce23f223450a0326fbebde39cdf496a85d8c016293fc851978
+FROM alpine:latest@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b
 ENV NODE_ENV=production
 
 RUN addgroup -g 1000 node && adduser -u 1000 -G node -s /bin/sh -D node 
