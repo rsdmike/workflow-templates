@@ -2,7 +2,7 @@
 # Copyright (c) Intel Corporation 2023
 # SPDX-License-Identifier: Apache-2.0
 #*********************************************************************/
-FROM node:21-bullseye-slim@sha256:0b45d811c7eb924e9e5c57e4cf609af27ab48d2a3db2b5fad7f5e1cd8963d720 as builder
+FROM node:21-bullseye-slim@sha256:eacf88f50e8c5b5f9e3ff757a1ca078c2e249d601cb9ac90b515932a09164e74 as builder
 LABEL license='SPDX-License-Identifier: Apache-2.0' \
     copyright='Copyright (c) Intel Corporation 2023'
 WORKDIR /usr/src/app
